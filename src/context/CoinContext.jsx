@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 
-export const CoinContext = createContext();
+export const Coincontext = createContext();
 
 
 const CoinContextProvider = ({children}) => {

@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Coin.css";
 import { useParams } from "react-router-dom";
-import { CoinContext } from "../../context/Coincontext";
 import LineChart from "../../components/LineChart/LineChart";
+import { Coincontext } from "../../context/CoinContext";
 
 const Coin = () => {
   const { coinId } = useParams();
   const [coinData, setCoinData] = useState();
   const [historicalData, setHistoricalData] = useState();
-  const { currency } = useContext(CoinContext)
+  const { currency } = useContext(Coincontext)
 
   const fetchCoinData = async () => {
     const options = {

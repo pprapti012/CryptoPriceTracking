@@ -2,12 +2,12 @@ import React, { useContext } from "react";
 import "./NavBar.css";
 import logo from "../../assets/logo.png";
 import arrow_icon from "../../assets/arrow_icon.png";
-import { CoinContext } from "../../context/Coincontext";
 import {Link} from "react-router-dom"
+import { Coincontext } from "../../context/CoinContext";
 
 
 const NavBar = () => {
-  const { setCurrency } = useContext(CoinContext);
+  const { setCurrency } = useContext(Coincontext);
 
   const currencyHandler = (event) => {
     switch (event.target.value) {
